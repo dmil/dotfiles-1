@@ -36,3 +36,11 @@ fi
 
 # Some post-secret aliases
 export HOMEBREW_GITHUB_TOKEN="$GITHUB_TOKEN"
+
+# More stuff from al
+export HOMEBREW_PREFIX="$(brew --prefix)"
+export NLTK_DATA="$HOME/nltk_data"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export RSTUDIO_WHICH_R="/usr/local/bin/R"
+export PIPENV_VENV_IN_PROJECT=1
+
