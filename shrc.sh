@@ -13,6 +13,13 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 # Set to avoid `env` output from changing console colour
 export LESS_TERMEND=$'\E[0m'
 
+# More stuff from al
+export HOMEBREW_PREFIX="$(brew --prefix)"
+export NLTK_DATA="$HOME/nltk_data"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export RSTUDIO_WHICH_R="/usr/local/bin/R"
+export PIPENV_VENV_IN_PROJECT=1
+
 # Print field by number
 field() {
   ruby -ane "puts \$F[$1]"
@@ -152,4 +159,3 @@ add_to_path_start "$HOME/.local/bin"
 
 # Look in ./bin but do it last to avoid weird `which` results.
 force_add_to_path_start "bin"
-
