@@ -24,10 +24,13 @@ brew 'elasticsearch', restart_service: :changed
 
 # languages
 brew 'python'
+brew 'pyenv'
 brew 'pipenv'
 brew 'node'
+brew 'nodenv'
 brew 'yarn'
 brew 'ruby'
+brew 'rbenv'
 
 # dev gui
 cask 'iterm2' unless File.directory?("/Applications/iTerm.app")
