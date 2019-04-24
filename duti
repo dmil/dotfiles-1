@@ -1,0 +1,19 @@
+# List of Uniform Type Identifiers in OS X: http://mths.be/utis
+
+# Format:
+# [Bundle ID] [UTI or `.extension`] [role]
+
+org.videolan.vlc .avi all
+org.videolan.vlc .mkv all
+
+com.microsoft.VSCode R all
+com.microsoft.VSCode java all
+com.microsoft.VSCode js all
+com.microsoft.VSCode py all
+com.microsoft.VSCode rb all
+com.microsoft.VSCode sh all
+com.microsoft.VSCode json all
+com.microsoft.Excel csv all
+com.microsoft.VSCode public.plain-text all
+com.microsoft.VSCode public.unix-executable all
+com.microsoft.VSCode public.source-code all
