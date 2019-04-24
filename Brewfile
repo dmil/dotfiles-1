@@ -40,7 +40,7 @@ cask 'visual-studio-code' unless File.directory?("/Applications/Visual Studio Co
 cask 'tableplus'
 cask 'postico' # postgres gui
 cask 'pgadmin4' # postgres gui
-cask 'sqlitebrowser' # sqlite gui
+cask 'db-browser-for-sqlite' # sqlite gui
 cask 'sequel-pro' # mysql gui
 cask 'charles'
 cask 'caskroom/drivers/logitech-options'
