@@ -99,7 +99,7 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 # https://apple.stackexchange.com/questions/27544/how-to-completely-disable-auto-save-and-versions-in-mac-os-x-lion
 defaults write -g ApplePersistence -bool no
 
-fancy_echo "Done configuring macOS!"
+echo "Done configuring macOS!"
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 	
