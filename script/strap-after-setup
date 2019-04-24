@@ -6,26 +6,11 @@ cd $(dirname $0)/..
 script/install-vscode-extensions
 
 # Stuff from Al's Setup Script
-fancy_echo() {
-  local fmt="$1"; shift
-
-  # shellcheck disable=SC2059
-  printf "\n$fmt\n" "$@"
-}
-
-fancy_echo "Configuring Postgres ..."
-
+echo "Configuring Postgres ..."
 createuser --superuser --createdb --createrole --replication postgres || true
 createuser --superuser --createdb --createrole --replication root || true
 
-fancy_echo "Setting up Python ..."
 script/setup-python
-
-fancy_echo "Setting up Ruby ..."
 script/setup-ruby
-
-fancy_echo "Setting up Nodenv ..."
 script/setup-node
-
-fancy_echo "Configuring macOS settings..."
 script/setup-macos-settings
