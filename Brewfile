@@ -51,6 +51,7 @@ cask 'flash-npapi'
 cask 'google-hangouts'
 
 # non-dev gui
+cask 'firefox'
 cask 'slack' unless File.directory?("/Applications/Slack.app")
 cask 'google-chrome-canary' unless File.directory?("/Applications/Google Chrome Canary.app")
 cask 'google-chrome-beta' unless File.directory?("/Applications/Google Chrome.app")
