@@ -1,7 +1,7 @@
 echo "Configuring Node ..."
 
 find_latest_node() {
-  latest_major_version="12"
+  latest_major_version="11"
   nodenv install -l | grep -v - | grep "  $latest_major_version." | tail -1 | sed -e 's/^ *//'
 }
 

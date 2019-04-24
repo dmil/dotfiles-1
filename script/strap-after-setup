@@ -7,8 +7,8 @@ script/install-vscode-extensions
 
 # Stuff from Al's Setup Script
 echo "Configuring Postgres ..."
-createuser --superuser --createdb --createrole --replication postgres || true
-createuser --superuser --createdb --createrole --replication root || true
+createuser --superuser --createdb --createrole --replication postgres 2>/dev/null || true
+createuser --superuser --createdb --createrole --replication root 2>/dev/null || true
 
 script/setup-python
 script/setup-ruby
