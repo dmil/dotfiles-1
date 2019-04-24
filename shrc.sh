@@ -53,8 +53,10 @@ add_to_path_end "$HOME/.dotfiles/bin"
 add_to_path_start "/usr/local/bin"
 add_to_path_start "/usr/local/sbin"
 
-# Run rbenv if it exists
+# Run TKTKenv if it exists
 quiet_which rbenv && add_to_path_start "$(rbenv root)/shims"
+quiet_which pyenv && add_to_path_start "$(pyenv root)/shims"
+quiet_which nodenv && add_to_path_start "$(nodenv root)/shims"
 
 # Aliases
 alias mkdir="mkdir -vp"
@@ -148,3 +150,4 @@ trash() {
 
 # Look in ./bin but do it last to avoid weird `which` results.
 force_add_to_path_start "bin"
+
