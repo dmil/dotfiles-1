@@ -101,6 +101,7 @@ if [ "$MACOS" ]
 then
   export GREP_OPTIONS="--color=auto"
   export CLICOLOR=1
+  export LSCOLORS=GxFxCxDxBxegedabagaced
 
   if quiet_which diff-highlight
   then
