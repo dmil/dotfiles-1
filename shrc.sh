@@ -148,6 +148,8 @@ trash() {
   mv "$@" "$HOME/.Trash/"
 }
 
+add_to_path_start "$HOME/.local/bin"
+
 # Look in ./bin but do it last to avoid weird `which` results.
 force_add_to_path_start "bin"
 
