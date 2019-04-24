@@ -20,6 +20,22 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 export RSTUDIO_WHICH_R="/usr/local/bin/R"
 export PIPENV_VENV_IN_PROJECT=1
 
+make_ssh_key() {
+  if [ ! -f "$HOME/.ssh/id_rsa" ]; then
+    ssh-keygen -q -t rsa -b 2048 -N "" -f "$HOME/.ssh/id_rsa" -C "dhrumil.mehta@gmail.com"
+    eval "$(ssh-agent -s)"
+    if [ $MACOS ]; then
+      ssh-add -K "$HOME/.ssh/id_rsa"
+    else
+      ssh-add "$HOME/.ssh/id_rsa"
+    fi
+    pbcopy < "$HOME/.ssh/id_rsa.pub"
+    open https://github.com/settings/ssh
+  else
+    echo "ssh key already exists"
+  fi
+}
+
 # Print field by number
 field() {
   ruby -ane "puts \$F[$1]"
