@@ -31,6 +31,8 @@ brew 'nodenv'
 brew 'yarn'
 brew 'ruby'
 brew 'rbenv'
+cask 'r'
+cask 'rstudio'
 
 # dev gui
 cask 'iterm2' unless File.directory?("/Applications/iTerm.app")
@@ -68,6 +70,7 @@ cask 'arduino'
 cask 'paintbrush'
 cask 'fluid'
 cask 'balenaetcher'
+cask '1password'
 
 # https://github.com/sindresorhus/quick-look-plugins
 cask 'qlcolorcode'
