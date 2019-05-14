@@ -40,15 +40,20 @@ if type brew &>/dev/null; then
   fi
 fi
 
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # Colorful prompt
-if [ "$USER" = "root" ]
+if [ $USER = "root" ]
 then
   PS1='\[\033[01;35m\]\h\[\033[01;34m\] \W #\[\033[00m\] '
 elif [ -n "${SSH_CONNECTION}" ]
 then
   PS1='\[\033[01;36m\]\h\[\033[01;34m\] \W #\[\033[00m\] '
 else
-  PS1='\[\033[01;32m\]\h\[\033[01;34m\] \W #\[\033[00m\] '
+  # PS1='\[\033[01;32m\]\h\[\033[01;34m\] \W #\[\033[00m\] '
+  PS1="\u \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 fi
 
 # only set key bindings on interactive shell
